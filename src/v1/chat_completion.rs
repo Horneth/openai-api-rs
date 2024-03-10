@@ -241,8 +241,8 @@ pub struct FinishDetails {
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct ToolCall {
-    pub id: String,
-    pub r#type: String,
+    pub id: Option<String>,
+    pub r#type: Option<String>,
     pub function: ToolCallFunction,
 }
 
