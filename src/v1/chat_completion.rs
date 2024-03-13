@@ -96,6 +96,7 @@ pub enum MessageRole {
     system,
     assistant,
     function,
+    tool,
 }
 
 #[derive(Debug, Deserialize, Clone, PartialEq, Eq)]
