@@ -244,7 +244,9 @@ pub struct FinishDetails {
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct ToolCall {
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub id: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub r#type: Option<String>,
     pub function: ToolCallFunction,
 }
